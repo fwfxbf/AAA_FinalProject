@@ -1,0 +1,16 @@
+Objects/
+Listings/
+DebugConfig/
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.elf
+*.map
+*.uvguix.*
+*.uvgui.*
+*.uvoptx
+.DS_Store
+Thumbs.db
