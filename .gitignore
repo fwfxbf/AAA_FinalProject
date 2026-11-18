@@ -1,3 +1,5 @@
+MDK-ARM/Obj/
+MDK-ARM/Listings/
 Objects/
 Listings/
 DebugConfig/
@@ -5,6 +7,9 @@ DebugConfig/
 MDK-ARM/RTE/
 *.o
 *.d
+*.bak
+*.lst
+*.uvopt
 *.log
 *.lock
 *.crf
@@ -20,6 +25,8 @@ MDK-ARM/RTE/
 *.sct
 *.dep
 *.htm
+JLinkSettings.ini
 JLinkLog.txt
 .DS_Store
+.mxproject
 Thumbs.db
