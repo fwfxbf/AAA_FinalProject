@@ -13,4 +13,5 @@ const Padstate *Pad_Get(void);       /* 此函数返回一个指向Padstate结�
 bool            Pad_IsAlive(void);   /* 300ms 无数据 = 掉线 */
 
 
+
 #endif
