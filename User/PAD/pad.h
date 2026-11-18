@@ -1,5 +1,5 @@
-#ifndef __PAD_H
-#define __PAD_H
+#ifndef PAD_H
+#define PAD_H
 
 #include "stdint.h"
 
