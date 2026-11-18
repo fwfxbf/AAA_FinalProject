@@ -1,8 +1,12 @@
 Objects/
 Listings/
 DebugConfig/
+.vscode/
+MDK-ARM/RTE/
 *.o
 *.d
+*.log
+*.lock
 *.crf
 *.axf
 *.hex
@@ -12,5 +16,10 @@ DebugConfig/
 *.uvguix.*
 *.uvgui.*
 *.uvoptx
+*.lnp
+*.sct
+*.dep
+*.htm
+JLinkLog.txt
 .DS_Store
 Thumbs.db
