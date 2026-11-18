@@ -30,12 +30,9 @@ Robot/
 │   └── APP/              P4：模式机、调度
 │       ├── app_main.c/.h
 │       └── app_mode.c/.h
-├── USB_HOST/             P4：XInput 驱动（CubeMX 生成结构 + 我们加的类）
-│   ├── usb_host.c/.h
-│   └── usbh_xinput.c/.h
-└── docs/
-    ├── 架构与协作指南.md
-    └── PATCHES.md
+└── USB_HOST/             P4：XInput 驱动（CubeMX 生成结构 + 我们加的类）
+    ├── usb_host.c/.h
+    └── usbh_xinput.c/.h
 ```
 
 **每个目录 = 一个人的地盘。** 别人只能 `#include` 它的头文件，不能进去改 `.c`。
