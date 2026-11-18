@@ -1,6 +1,6 @@
-电控B组的结营项目
+# 电控B组的结营项目
 
-文件结构
+## 一.文件结构
 
 ```
 Robot/
@@ -40,8 +40,10 @@ Robot/
 
 **每个目录 = 一个人的地盘。** 别人只能 `#include` 它的头文件，不能进去改 `.c`。
 
-二.引脚分配(括号内为User Label)\
-  麦轮\
+
+## 二.引脚分配(括号内为User Label)\
+
+### 麦轮\
 FL:Front-Left FR:Front-Right RL:Rear-Left RR:Rear-Right\
 PE0(FL_IN1)前左轮IN1  PE9(FL_PWMM)前左轮PWM\
 PE1(FL_IN2)前左轮IN2\
