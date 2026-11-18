@@ -3,7 +3,7 @@
 ## 一.文件结构
 
 ```
-Robot/
+AAA_FinalProject/
 ├── Core/                 CubeMX 生成
 ├── Drivers/              ST HAL
 ├── Middlewares/          USB Host 库（有 USER PATCH）
