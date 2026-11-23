@@ -26,6 +26,9 @@
 
 /* USER CODE BEGIN Includes */
 
+#include "usbh_xbox.h"
+#include "bsp_uart.h"
+
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN PV */
@@ -76,7 +79,7 @@ void MX_USB_HOST_Init(void)
   {
     Error_Handler();
   }
-  if (USBH_RegisterClass(&hUsbHostFS, USBH_HID_CLASS) != USBH_OK)
+  if (USBH_RegisterClass(&hUsbHostFS, &USBH_XBOX_CLASS) != USBH_OK)
   {
     Error_Handler();
   }
@@ -110,10 +113,12 @@ static void USBH_UserProcess  (USBH_HandleTypeDef *phost, uint8_t id)
 
   case HOST_USER_DISCONNECTION:
   Appli_state = APPLICATION_DISCONNECT;
+  Bsp_Printf("[PAD] 手柄已断开\r\n");
   break;
 
   case HOST_USER_CLASS_ACTIVE:
   Appli_state = APPLICATION_READY;
+  Bsp_Printf("[PAD] 手柄已就绪\r\n");
   break;
 
   case HOST_USER_CONNECTION:

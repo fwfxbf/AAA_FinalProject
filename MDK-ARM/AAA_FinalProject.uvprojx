@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../USB_HOST/App;../USB_HOST/Target;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\User\APP;..\User\ARM;..\User\BSP;..\User\CHASSIS;..\User\PAD;..\User\SENSOR</IncludePath>
+              <IncludePath>../Core/Inc;../USB_HOST/App;../USB_HOST/Target;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\User\APP;..\User\ARM;..\User\BSP;..\User\CHASSIS;..\User\PAD;..\User\SENSOR;..\Middlewares\ST\STM32_USB_Host_Library\Class\XBOX\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -756,6 +756,11 @@
               <FileName>usbh_hid_parser.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src/usbh_hid_parser.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_xbox.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\ST\STM32_USB_Host_Library\Class\XBOX\Src\usbh_xbox.c</FilePath>
             </File>
           </Files>
         </Group>

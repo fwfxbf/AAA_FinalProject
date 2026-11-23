@@ -671,7 +671,7 @@ USBH_StatusTypeDef USBH_Process(USBH_HandleTypeDef *phost)
       {
         phost->pActiveClass = NULL;
 
-        for (idx = 0U; idx < USBH_MAX_NUM_SUPPORTED_CLASS; idx++)
+        for (idx = 0U; idx < phost->ClassNumber; idx++)
         {
           if (phost->pClass[idx]->ClassCode == phost->device.CfgDesc.Itf_Desc[0].bInterfaceClass)
           {
@@ -682,6 +682,8 @@ USBH_StatusTypeDef USBH_Process(USBH_HandleTypeDef *phost)
 
         if (phost->pActiveClass != NULL)
         {
+          USBH_UsrLog("Selected Class: %s",
+            phost->pActiveClass->Name);
           if (phost->pActiveClass->Init(phost) == USBH_OK)
           {
             phost->gState = HOST_CLASS_REQUEST;

@@ -26,7 +26,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "pad.h"
+#include "bsp_uart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,6 +105,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    
+    static uint32_t dbg = 0U;
+    if ((HAL_GetTick() - dbg) >= 200U)
+    {
+      dbg = HAL_GetTick();
+      const Padstate *p = Pad_Get();
+      Bsp_Printf("alive=%d btn=%04lX LX=%6d LY=%6d LT=%3d RT=%3d\r\n",
+                (int)Pad_IsAlive(),
+                (unsigned long)p->buttons, p->lx, p->ly, p->lt, p->rt);
+    }
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
 
