@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "dma.h"
+#include "i2c.h"
 #include "tim.h"
 #include "usart.h"
 #include "usb_host.h"
@@ -97,6 +98,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USB_HOST_Init();
   MX_TIM1_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
