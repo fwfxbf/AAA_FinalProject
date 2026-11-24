@@ -30,7 +30,6 @@ AAA_FinalProject/
 │       ├── app_main.c/.h
 │       └── app_mode.c/.h
 └── USB_HOST/             P4
-    └── usb_host.c/.h
 ```
 
 **每个目录 = 一个人的地盘。** 别人只能 `#include` 它的头文件，不能进去改 `.c`。
@@ -40,11 +39,15 @@ AAA_FinalProject/
 
 ### 麦轮
 FL:Front-Left  FR:Front-Right  RL:Rear-Left  RR:Rear-Right\
-PE0(FL_IN1)前左轮IN1  PE9(FL_PWM)前左轮PWM\
-PE1(FL_IN2)前左轮IN2\
-PE2(FR_IN1)前右轮IN1  PE11(FR_PWM)前右轮PWM\
-PE3(FR_IN1)前右轮IN2\
-PE4(RL_IN1)后左轮IN1  PE13(RL_PWM)后左轮PWM\
-PE5(RL_IN1)后左轮IN2\
-PE6(RR_IN1)后右轮IN1  PE14(RR_PWM)后右轮PWM\
-PE7(RR_IN1)后右轮IN2
+PE0(FL_IN1) 前左轮IN1    PE9(FL_PWM) 前左轮PWM\
+PE1(FL_IN2) 前左轮IN2\
+PE2(FR_IN1) 前右轮IN1    PE11(FR_PWM) 前右轮PWM\
+PE3(FR_IN1) 前右轮IN2\
+PE4(RL_IN1) 后左轮IN1    PE13(RL_PWM) 后左轮PWM\
+PE5(RL_IN1) 后左轮IN2\
+PE6(RR_IN1) 后右轮IN1    PE14(RR_PWM) 后右轮PWM\
+PE7(RR_IN1) 后右轮IN2
+### 舵机
+PB8 I2C1_SDA\
+PB9 I2C1_SCL\
+PB10(SERVO_OE) PCA9685使能
