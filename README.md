@@ -10,6 +10,7 @@ AAA_FinalProject/
 ├── User/                 ★ 自己写的代码全部放这里（CubeMX 不会碰）
 │   ├── BSP/              P4：串口、时间、LED
 │   │   ├── bsp_uart.c/.h
+│   │   ├── bsp_i2c.c/.h
 │   │   └── bsp_time.c/.h
 │   ├── PAD/              P4：手柄抽象
 │   │   ├── pad.h
@@ -50,4 +51,7 @@ PE7(RR_IN1) 后右轮IN2
 ### 舵机
 PB8 I2C1_SCL\
 PB9 I2C1_SDA\
-PB10(SERVO_OE) PCA9685使能
+PB5(SERVO_OE) PCA9685使能(默认高电平)
+### 循迹
+PB10 I2C2_SCL\
+PB11 I2C2_SDA
