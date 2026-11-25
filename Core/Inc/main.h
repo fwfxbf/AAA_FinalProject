@@ -79,7 +79,7 @@ void Error_Handler(void);
 #define RL_PWM_GPIO_Port GPIOE
 #define RR_PWM_Pin GPIO_PIN_14
 #define RR_PWM_GPIO_Port GPIOE
-#define SERVO_OE_Pin GPIO_PIN_10
+#define SERVO_OE_Pin GPIO_PIN_5
 #define SERVO_OE_GPIO_Port GPIOB
 #define FL_IN1_Pin GPIO_PIN_0
 #define FL_IN1_GPIO_Port GPIOE
