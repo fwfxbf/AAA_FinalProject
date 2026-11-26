@@ -11,6 +11,7 @@ static AppMode current_mode = MODE_IDLE;
 void App_Mode_Init(void)
 {
   current_mode = MODE_IDLE;
+  Bsp_Printf("[APP] 初始化完毕\r\n");
   //Chassis_Stop();
 }
 
@@ -34,13 +35,13 @@ static void App_Mode_Set(AppMode new_mode)
   switch (current_mode)
   {
     case MODE_IDLE:
-      Bsp_Printf("更新至模式:停止\n");
+      Bsp_Printf("[MODE] 停止\r\n");
       break;
     case MODE_TRACK:
-      Bsp_Printf("更新至模式:循迹\n");
+      Bsp_Printf("[MODE] 循迹\r\n");
       break;
     case MODE_REMOTE:
-      Bsp_Printf("更新至模式:遥控\n");
+      Bsp_Printf("[MODE] 遥控\r\n");
       break;
   }
 }

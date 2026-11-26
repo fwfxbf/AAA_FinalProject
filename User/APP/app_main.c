@@ -20,6 +20,23 @@ void App_Init(void)
 void App_Loop(void)
 {
   App_Mode_Update();              /* 更新模式 */
+  mode = App_Mode_Get();
 
   const Padstate *p = Pad_Get();
+
+  switch (mode)                   /* 主逻辑 */
+  {
+    case MODE_IDLE:
+
+      break;
+
+    case MODE_TRACK:
+
+      break;
+
+    case MODE_REMOTE:
+
+      break;
+  }
+
 }
