@@ -83,7 +83,7 @@ void Chassis_Stop(void)
     for (i = 0; i < WHEEL_NUM; i++) {
         s_target_pwm[i] = 0;
         s_now_pwm[i]= 0;
-        DrvMotor_Brake(i);          /
+        DrvMotor_Brake(i);          
     s_running = 0;
 }
 void Chassis_Task(void)
