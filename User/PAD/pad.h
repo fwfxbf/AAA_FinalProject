@@ -8,12 +8,13 @@
 #define PAD_DPAD_DOWN       (1UL << 1)
 #define PAD_DPAD_LEFT       (1UL << 2)
 #define PAD_DPAD_RIGHT      (1UL << 3)
-#define PAD_START           (1UL << 4)
-#define PAD_BACK            (1UL << 5)
-#define PAD_L3              (1UL << 6)   // 左摇杆按下
-#define PAD_R3              (1UL << 7)   // 右摇杆按下
+#define PAD_MENU            (1UL << 4)
+#define PAD_VIEW            (1UL << 5)
+#define PAD_LS              (1UL << 6)   // 左摇杆按下
+#define PAD_RS              (1UL << 7)   // 右摇杆按下
 #define PAD_LB              (1UL << 8)   // 左肩键
 #define PAD_RB              (1UL << 9)   // 右肩键
+#define PAD_XBOX            (1UL << 10)
 #define PAD_A               (1UL << 12)
 #define PAD_B               (1UL << 13)
 #define PAD_X               (1UL << 14)

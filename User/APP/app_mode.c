@@ -41,8 +41,10 @@ static void App_Mode_Set(AppMode new_mode)
       Bsp_Printf("[MODE] 循迹\r\n");
       break;
     case MODE_REMOTE:
-      Bsp_Printf("[MODE] 遥控\r\n");
+      Bsp_Printf("[MODE] 遥控底盘\r\n");
       break;
+    case MODE_ARM:
+      Bsp_Printf("[MODE] 遥控机械臂\r\n");
   }
 }
 
@@ -63,16 +65,20 @@ void App_Mode_Update(void)
   }
 
   /* 2. 判断模式切换按键 */
-  if (pad->buttons & PAD_DPAD_LEFT)
+  if (pad->buttons & PAD_LS)
   {
     App_Mode_Set(MODE_IDLE);
   }
-  else if (pad->buttons & PAD_L3)
+  else if (pad->buttons & PAD_XBOX)
   {
     App_Mode_Set(MODE_TRACK);
   }
-  else if (pad->buttons & PAD_R3)
+  else if (pad->buttons & PAD_VIEW)
   {
     App_Mode_Set(MODE_REMOTE);
+  }
+  else if (pad->buttons & PAD_MENU)
+  {
+    App_Mode_Set(MODE_ARM);
   }
 }

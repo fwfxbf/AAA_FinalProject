@@ -4,9 +4,10 @@
 
 
 typedef enum {
-    MODE_IDLE = 0,   /* 停车待命(左十字键) */
-    MODE_TRACK,      /* 循迹(LS) */
-    MODE_REMOTE,     /* 手柄遥控(RS) */
+    MODE_IDLE = 0,   /* 停车 */
+    MODE_TRACK,      /* 循迹 */
+    MODE_REMOTE,     /* 手柄遥控底盘 */
+    MODE_ARM,        /* 手柄遥控机械臂 */
 } AppMode;
 
 
