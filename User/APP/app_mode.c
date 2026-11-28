@@ -3,6 +3,7 @@
 #include "bsp_uart.h"
 #include "pad.h"
 #include "chassis.h"
+#include "main.h"
 
 /* 当前模式 */
 static AppMode current_mode = MODE_IDLE;
@@ -48,6 +49,7 @@ static void App_Mode_Set(AppMode new_mode)
   }
 }
 
+
 /* 模式机更新 */
 void App_Mode_Update(void)
 {
@@ -80,5 +82,14 @@ void App_Mode_Update(void)
   else if (pad->buttons & PAD_MENU)
   {
     App_Mode_Set(MODE_ARM);
+  }
+}
+
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_PIN)
+{
+  if (GPIO_PIN == ESTOP_Pin)
+  {
+    App_Mode_Set(MODE_IDLE);
   }
 }
